@@ -20,12 +20,12 @@ from json import JSONDecodeError
 
 # Load environment variables
 load_dotenv()
-
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
 # Flask App Initialization
 app = Flask(__name__)
 CORS(app, resources={
     r"/api/*": {
-        "origins": "http://localhost:3000",
+        "origins": ALLOWED_ORIGINS,
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"],
         "supports_credentials": True
