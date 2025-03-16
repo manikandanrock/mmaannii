@@ -118,9 +118,9 @@ rich==13.9.4
 rpds-py==0.23.1
 rsa==4.9
 safetensors==0.5.3
-scikit-learn==1.4.1
-scipy==1.11.3
-setuptools==75.9.1
+scikit-learn
+scipy
+setuptools
 shellingham==1.5.4
 six==1.17.0
 smart-open==7.1.0
